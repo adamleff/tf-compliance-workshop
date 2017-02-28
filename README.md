@@ -4,6 +4,18 @@
 
  * a valid `delivery.license` file in this directory
 
+## Running the thing
+
+Assuming I want my automate hostname prefixed with `scale` and my AWS EC2 SSH keypair is named `mykeynamehere`:
+
+```
+export TF_VAR_prefix="scale"
+export TF_VAR_aws_sshkey="mykeynamehere"
+terraform plan     # make sure that the expected number of workstations are created, etc.
+terraform apply
+ruby ./parse_state.rb terraform.tfstate
+```
+
 ## Variables
 
  * prefix (env var: TF_VAR_prefix): the prefix to be used in hostnames
