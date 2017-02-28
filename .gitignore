@@ -1,0 +1,5 @@
+delivery.license
+delivery.pem
+.terraform
+*.tfstate
+*.tfstate.backup
