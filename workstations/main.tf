@@ -11,7 +11,7 @@ variable "aws_sshkey" {}
 
 resource "aws_instance" "workstation-numbered" {
   count = "${var.count >= 9 ? "9" : "${var.count}"}"
-  ami = "ami-56e46636"
+  ami = "ami-912daff1"
   key_name = "${var.aws_sshkey}"
   instance_type = "t2.micro"
   vpc_security_group_ids = ["sg-d36252b4"]
@@ -62,7 +62,7 @@ EOL
 
 resource "aws_instance" "workstation-jack" {
   count = "${var.count >= 10 ? "1" : "0"}"
-  ami = "ami-56e46636"
+  ami = "ami-912daff1"
   key_name = "${var.aws_sshkey}"
   instance_type = "t2.micro"
   vpc_security_group_ids = ["sg-d36252b4"]
@@ -89,7 +89,7 @@ resource "aws_instance" "workstation-jack" {
     destination = "/tmp/config.rb"
     #content = "${data.template_file.chef_config_rb.rendered}"
     content = <<EOL
-node_name "${var.color == "" ? "${count.index + 2}-of-${var.suit}" : "${var.color}-${count.index + 2}-of-${var.suit}"}"
+node_name "${var.color == "" ? "jack-of-${var.suit}" : "${var.color}-jack-of-${var.suit}"}"
 data_collector.server_url "https://${var.automate_fqdn}/data-collector/v0/"
 data_collector.token "93a49a4f2482c64126f7b6015e6b0f30284287ee4054ff8807fb63d9cbd1c506"
 ssl_verify_mode :verify_none
@@ -113,7 +113,7 @@ EOL
 
 resource "aws_instance" "workstation-queen" {
   count = "${var.count >= 11 ? "1" : "0"}"
-  ami = "ami-56e46636"
+  ami = "ami-912daff1"
   key_name = "${var.aws_sshkey}"
   instance_type = "t2.micro"
   vpc_security_group_ids = ["sg-d36252b4"]
@@ -140,7 +140,7 @@ resource "aws_instance" "workstation-queen" {
     destination = "/tmp/config.rb"
     #content = "${data.template_file.chef_config_rb.rendered}"
     content = <<EOL
-node_name "${var.color == "" ? "${count.index + 2}-of-${var.suit}" : "${var.color}-${count.index + 2}-of-${var.suit}"}"
+node_name "${var.color == "" ? "queen-of-${var.suit}" : "${var.color}-queen-of-${var.suit}"}"
 data_collector.server_url "https://${var.automate_fqdn}/data-collector/v0/"
 data_collector.token "93a49a4f2482c64126f7b6015e6b0f30284287ee4054ff8807fb63d9cbd1c506"
 ssl_verify_mode :verify_none
@@ -164,7 +164,7 @@ EOL
 
 resource "aws_instance" "workstation-king" {
   count = "${var.count >= 12 ? "1" : "0"}"
-  ami = "ami-56e46636"
+  ami = "ami-912daff1"
   key_name = "${var.aws_sshkey}"
   instance_type = "t2.micro"
   vpc_security_group_ids = ["sg-d36252b4"]
@@ -191,7 +191,7 @@ resource "aws_instance" "workstation-king" {
     destination = "/tmp/config.rb"
     #content = "${data.template_file.chef_config_rb.rendered}"
     content = <<EOL
-node_name "${var.color == "" ? "${count.index + 2}-of-${var.suit}" : "${var.color}-${count.index + 2}-of-${var.suit}"}"
+node_name "${var.color == "" ? "king-of-${var.suit}" : "${var.color}-king-of-${var.suit}"}"
 data_collector.server_url "https://${var.automate_fqdn}/data-collector/v0/"
 data_collector.token "93a49a4f2482c64126f7b6015e6b0f30284287ee4054ff8807fb63d9cbd1c506"
 ssl_verify_mode :verify_none
@@ -215,7 +215,7 @@ EOL
 
 resource "aws_instance" "workstation-ace" {
   count = "${var.count >= 13 ? "1" : "0"}"
-  ami = "ami-56e46636"
+  ami = "ami-912daff1"
   key_name = "${var.aws_sshkey}"
   instance_type = "t2.micro"
   vpc_security_group_ids = ["sg-d36252b4"]
@@ -242,7 +242,7 @@ resource "aws_instance" "workstation-ace" {
     destination = "/tmp/config.rb"
     #content = "${data.template_file.chef_config_rb.rendered}"
     content = <<EOL
-node_name "${var.color == "" ? "${count.index + 2}-of-${var.suit}" : "${var.color}-${count.index + 2}-of-${var.suit}"}"
+node_name "${var.color == "" ? "ace-of-${var.suit}" : "${var.color}-ace-of-${var.suit}"}"
 data_collector.server_url "https://${var.automate_fqdn}/data-collector/v0/"
 data_collector.token "93a49a4f2482c64126f7b6015e6b0f30284287ee4054ff8807fb63d9cbd1c506"
 ssl_verify_mode :verify_none

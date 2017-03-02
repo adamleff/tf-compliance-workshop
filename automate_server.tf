@@ -28,7 +28,7 @@ data "aws_route53_zone" "chefdemo" {
 resource "aws_instance" "automate" {
     ami = "ami-d2c924b2"
     key_name = "${var.aws_sshkey}"
-    instance_type = "t2.medium"
+    instance_type = "m4.4xlarge"
     vpc_security_group_ids = ["sg-d36252b4"]
     root_block_device {
       volume_size = 60

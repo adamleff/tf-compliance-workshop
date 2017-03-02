@@ -6,6 +6,8 @@
 
 ## Running the thing
 
+This is all configured for the us-west region of EC2.
+
 Assuming I want my automate hostname prefixed with `scale` and my AWS EC2 SSH keypair is named `mykeynamehere`:
 
 ```
@@ -13,7 +15,7 @@ export TF_VAR_prefix="scale"
 export TF_VAR_aws_sshkey="mykeynamehere"
 terraform plan     # make sure that the expected number of workstations are created, etc.
 terraform apply
-ruby ./parse_state.rb terraform.tfstate
+ruby ./parse-state.rb terraform.tfstate
 ```
 
 ## Variables
