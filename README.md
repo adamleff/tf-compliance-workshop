@@ -15,7 +15,7 @@ export TF_VAR_prefix="scale"
 export TF_VAR_aws_sshkey="mykeynamehere"
 terraform plan     # make sure that the expected number of workstations are created, etc.
 terraform apply
-ruby ./parse_state.rb terraform.tfstate
+ruby ./parse-state.rb terraform.tfstate
 ```
 
 ## Variables
