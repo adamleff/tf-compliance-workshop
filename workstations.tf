@@ -30,7 +30,7 @@ module "spades-workstations" {
 
 module "clubs-workstations" {
   source = "./workstations"
-  suit = "spades"
+  suit = "clubs"
   color = "orange"
   count = 13
   automate_fqdn = "${aws_route53_record.automate.name}"
@@ -70,7 +70,7 @@ module "blue-spades-workstations" {
 
 module "blue-clubs-workstations" {
   source = "./workstations"
-  suit = "spades"
+  suit = "clubs"
   color = "blue"
   count = 13
   automate_fqdn = "${aws_route53_record.automate.name}"
