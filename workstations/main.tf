@@ -11,7 +11,7 @@ variable "aws_sshkey" {}
 
 resource "aws_instance" "workstation-numbered" {
   count = "${var.count >= 9 ? "9" : "${var.count}"}"
-  ami = "ami-912daff1"
+  ami = "ami-766fe316"
   key_name = "${var.aws_sshkey}"
   instance_type = "t2.micro"
   vpc_security_group_ids = ["sg-d36252b4"]
@@ -62,7 +62,7 @@ EOL
 
 resource "aws_instance" "workstation-jack" {
   count = "${var.count >= 10 ? "1" : "0"}"
-  ami = "ami-912daff1"
+  ami = "ami-766fe316"
   key_name = "${var.aws_sshkey}"
   instance_type = "t2.micro"
   vpc_security_group_ids = ["sg-d36252b4"]
@@ -113,7 +113,7 @@ EOL
 
 resource "aws_instance" "workstation-queen" {
   count = "${var.count >= 11 ? "1" : "0"}"
-  ami = "ami-912daff1"
+  ami = "ami-766fe316"
   key_name = "${var.aws_sshkey}"
   instance_type = "t2.micro"
   vpc_security_group_ids = ["sg-d36252b4"]
@@ -164,7 +164,7 @@ EOL
 
 resource "aws_instance" "workstation-king" {
   count = "${var.count >= 12 ? "1" : "0"}"
-  ami = "ami-912daff1"
+  ami = "ami-766fe316"
   key_name = "${var.aws_sshkey}"
   instance_type = "t2.micro"
   vpc_security_group_ids = ["sg-d36252b4"]
@@ -215,7 +215,7 @@ EOL
 
 resource "aws_instance" "workstation-ace" {
   count = "${var.count >= 13 ? "1" : "0"}"
-  ami = "ami-912daff1"
+  ami = "ami-766fe316"
   key_name = "${var.aws_sshkey}"
   instance_type = "t2.micro"
   vpc_security_group_ids = ["sg-d36252b4"]
