@@ -12,7 +12,7 @@ variable "contact_tag" {
 }
 
 provider "aws" {
-    region = "us-west-2"
+  region     = "${var.region}"
 }
 
 resource "null_resource" "delivery_client_key" {
