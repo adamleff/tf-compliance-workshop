@@ -32,11 +32,14 @@ raise "File not readable" unless File.readable?(file)
 
 data = JSON.parse(File.read(file))
 
+puts "| Workstation | IP Address |"
+puts "| ----------- | ---------- |"
+
 data['modules'].each do |m|
   m['resources'].each do |res_name, res_data|
     attrs = res_data['primary']['attributes']
     next if attrs['public_ip'].nil?
-    puts "#{format_hostname(attrs['tags.Name'])} | #{attrs['public_ip']}"
+    puts "| #{format_hostname(attrs['tags.Name'])} | #{attrs['public_ip']} |"
   end
 end
 
