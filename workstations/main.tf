@@ -30,7 +30,8 @@ resource "aws_instance" "workstation-numbered" {
       "sudo sed 's/PasswordAuthentication no/PasswordAuthentication yes/g' /etc/ssh/sshd_config > /tmp/sshd_config",
       "sudo cp /tmp/sshd_config /etc/ssh/sshd_config",
       "sudo rm /tmp/sshd_config",
-      "sudo service sshd restart"
+      "sudo service sshd restart",
+      "sudo chef gem install inspec"
     ]
   }
 
@@ -81,7 +82,8 @@ resource "aws_instance" "workstation-jack" {
       "sudo sed 's/PasswordAuthentication no/PasswordAuthentication yes/g' /etc/ssh/sshd_config > /tmp/sshd_config",
       "sudo cp /tmp/sshd_config /etc/ssh/sshd_config",
       "sudo rm /tmp/sshd_config",
-      "sudo service sshd restart"
+      "sudo service sshd restart",
+      "sudo chef gem install inspec"
     ]
   }
 
@@ -132,7 +134,8 @@ resource "aws_instance" "workstation-queen" {
       "sudo sed 's/PasswordAuthentication no/PasswordAuthentication yes/g' /etc/ssh/sshd_config > /tmp/sshd_config",
       "sudo cp /tmp/sshd_config /etc/ssh/sshd_config",
       "sudo rm /tmp/sshd_config",
-      "sudo service sshd restart"
+      "sudo service sshd restart",
+      "sudo chef gem install inspec"
     ]
   }
 
@@ -183,7 +186,8 @@ resource "aws_instance" "workstation-king" {
       "sudo sed 's/PasswordAuthentication no/PasswordAuthentication yes/g' /etc/ssh/sshd_config > /tmp/sshd_config",
       "sudo cp /tmp/sshd_config /etc/ssh/sshd_config",
       "sudo rm /tmp/sshd_config",
-      "sudo service sshd restart"
+      "sudo service sshd restart",
+      "sudo chef gem install inspec"
     ]
   }
 
@@ -234,7 +238,8 @@ resource "aws_instance" "workstation-ace" {
       "sudo sed 's/PasswordAuthentication no/PasswordAuthentication yes/g' /etc/ssh/sshd_config > /tmp/sshd_config",
       "sudo cp /tmp/sshd_config /etc/ssh/sshd_config",
       "sudo rm /tmp/sshd_config",
-      "sudo service sshd restart"
+      "sudo service sshd restart",
+      "sudo chef gem install inspec"
     ]
   }
 
