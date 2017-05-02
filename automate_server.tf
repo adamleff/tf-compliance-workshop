@@ -59,7 +59,7 @@ resource "aws_instance" "automate" {
       inline = [
         "curl https://omnitruck.chef.io/install.sh | sudo bash -s -- -P automate",
         "sudo automate-ctl setup --license /tmp/delivery.license --fqdn ${var.prefix}-compliance-workshop.${data.aws_route53_zone.chefdemo.name} --key /tmp/delivery.pem --server-url https://fake-chef-server.chefdemo.net/organizations/chef --enterprise chef --no-build-node --configure",
-        "sudo automate-ctl create-user chef chef --password chef --roles admin"
+        "sudo automate-ctl create-user chef chef --password chicago --roles admin"
       ]
     }
 }
