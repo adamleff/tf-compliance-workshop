@@ -26,7 +26,7 @@ resource "aws_instance" "workstation-numbered" {
 
   provisioner "remote-exec" {
     inline = [
-      "sudo usermod --password '$1$hN3ER5P1$SVRwuMXdscNdFQGfj7Pi21' chef",
+      "sudo usermod --password '$1$odEJTw66$qVh4ZgjC9t2Aq0h3CUxX20' chef",
       "sudo mkdir -p /home/chef/.chef",
       "sudo sed 's/PasswordAuthentication no/PasswordAuthentication yes/g' /etc/ssh/sshd_config > /tmp/sshd_config",
       "sudo cp /tmp/sshd_config /etc/ssh/sshd_config",
@@ -78,7 +78,7 @@ resource "aws_instance" "workstation-jack" {
 
   provisioner "remote-exec" {
     inline = [
-      "sudo usermod --password '$1$hN3ER5P1$SVRwuMXdscNdFQGfj7Pi21' chef",
+      "sudo usermod --password '$1$odEJTw66$qVh4ZgjC9t2Aq0h3CUxX20' chef",
       "sudo mkdir -p /home/chef/.chef",
       "sudo sed 's/PasswordAuthentication no/PasswordAuthentication yes/g' /etc/ssh/sshd_config > /tmp/sshd_config",
       "sudo cp /tmp/sshd_config /etc/ssh/sshd_config",
@@ -130,7 +130,7 @@ resource "aws_instance" "workstation-queen" {
 
   provisioner "remote-exec" {
     inline = [
-      "sudo usermod --password '$1$hN3ER5P1$SVRwuMXdscNdFQGfj7Pi21' chef",
+      "sudo usermod --password '$1$odEJTw66$qVh4ZgjC9t2Aq0h3CUxX20' chef",
       "sudo mkdir -p /home/chef/.chef",
       "sudo sed 's/PasswordAuthentication no/PasswordAuthentication yes/g' /etc/ssh/sshd_config > /tmp/sshd_config",
       "sudo cp /tmp/sshd_config /etc/ssh/sshd_config",
@@ -182,7 +182,7 @@ resource "aws_instance" "workstation-king" {
 
   provisioner "remote-exec" {
     inline = [
-      "sudo usermod --password '$1$hN3ER5P1$SVRwuMXdscNdFQGfj7Pi21' chef",
+      "sudo usermod --password '$1$odEJTw66$qVh4ZgjC9t2Aq0h3CUxX20' chef",
       "sudo mkdir -p /home/chef/.chef",
       "sudo sed 's/PasswordAuthentication no/PasswordAuthentication yes/g' /etc/ssh/sshd_config > /tmp/sshd_config",
       "sudo cp /tmp/sshd_config /etc/ssh/sshd_config",
@@ -234,7 +234,7 @@ resource "aws_instance" "workstation-ace" {
 
   provisioner "remote-exec" {
     inline = [
-      "sudo usermod --password '$1$hN3ER5P1$SVRwuMXdscNdFQGfj7Pi21' chef",
+      "sudo usermod --password '$1$odEJTw66$qVh4ZgjC9t2Aq0h3CUxX20' chef",
       "sudo mkdir -p /home/chef/.chef",
       "sudo sed 's/PasswordAuthentication no/PasswordAuthentication yes/g' /etc/ssh/sshd_config > /tmp/sshd_config",
       "sudo cp /tmp/sshd_config /etc/ssh/sshd_config",
