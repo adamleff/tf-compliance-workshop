@@ -11,7 +11,7 @@ variable "aws_sshkey" {}
 
 resource "aws_instance" "workstation-numbered" {
   count = "${var.count >= 9 ? "9" : "${var.count}"}"
-  ami = "ami-7173fd11"
+  ami = "ami-62b0ad1b"
   key_name = "${var.aws_sshkey}"
   instance_type = "t2.micro"
   vpc_security_group_ids = ["sg-d36252b4"]
@@ -26,7 +26,7 @@ resource "aws_instance" "workstation-numbered" {
 
   provisioner "remote-exec" {
     inline = [
-      "sudo usermod --password '$1$odEJTw66$qVh4ZgjC9t2Aq0h3CUxX20' chef",
+      "sudo usermod --password '$1$jms7Ar65$xVMbdLJHd.gvsmLcWxGx9/' chef",
       "sudo mkdir -p /home/chef/.chef",
       "sudo sed 's/PasswordAuthentication no/PasswordAuthentication yes/g' /etc/ssh/sshd_config > /tmp/sshd_config",
       "sudo cp /tmp/sshd_config /etc/ssh/sshd_config",
@@ -63,7 +63,7 @@ EOL
 
 resource "aws_instance" "workstation-jack" {
   count = "${var.count >= 10 ? "1" : "0"}"
-  ami = "ami-7173fd11"
+  ami = "ami-62b0ad1b"
   key_name = "${var.aws_sshkey}"
   instance_type = "t2.micro"
   vpc_security_group_ids = ["sg-d36252b4"]
@@ -78,7 +78,7 @@ resource "aws_instance" "workstation-jack" {
 
   provisioner "remote-exec" {
     inline = [
-      "sudo usermod --password '$1$odEJTw66$qVh4ZgjC9t2Aq0h3CUxX20' chef",
+      "sudo usermod --password '$1$jms7Ar65$xVMbdLJHd.gvsmLcWxGx9/' chef",
       "sudo mkdir -p /home/chef/.chef",
       "sudo sed 's/PasswordAuthentication no/PasswordAuthentication yes/g' /etc/ssh/sshd_config > /tmp/sshd_config",
       "sudo cp /tmp/sshd_config /etc/ssh/sshd_config",
@@ -115,7 +115,7 @@ EOL
 
 resource "aws_instance" "workstation-queen" {
   count = "${var.count >= 11 ? "1" : "0"}"
-  ami = "ami-7173fd11"
+  ami = "ami-62b0ad1b"
   key_name = "${var.aws_sshkey}"
   instance_type = "t2.micro"
   vpc_security_group_ids = ["sg-d36252b4"]
@@ -130,7 +130,7 @@ resource "aws_instance" "workstation-queen" {
 
   provisioner "remote-exec" {
     inline = [
-      "sudo usermod --password '$1$odEJTw66$qVh4ZgjC9t2Aq0h3CUxX20' chef",
+      "sudo usermod --password '$1$jms7Ar65$xVMbdLJHd.gvsmLcWxGx9/' chef",
       "sudo mkdir -p /home/chef/.chef",
       "sudo sed 's/PasswordAuthentication no/PasswordAuthentication yes/g' /etc/ssh/sshd_config > /tmp/sshd_config",
       "sudo cp /tmp/sshd_config /etc/ssh/sshd_config",
@@ -167,7 +167,7 @@ EOL
 
 resource "aws_instance" "workstation-king" {
   count = "${var.count >= 12 ? "1" : "0"}"
-  ami = "ami-7173fd11"
+  ami = "ami-62b0ad1b"
   key_name = "${var.aws_sshkey}"
   instance_type = "t2.micro"
   vpc_security_group_ids = ["sg-d36252b4"]
@@ -182,7 +182,7 @@ resource "aws_instance" "workstation-king" {
 
   provisioner "remote-exec" {
     inline = [
-      "sudo usermod --password '$1$odEJTw66$qVh4ZgjC9t2Aq0h3CUxX20' chef",
+      "sudo usermod --password '$1$jms7Ar65$xVMbdLJHd.gvsmLcWxGx9/' chef",
       "sudo mkdir -p /home/chef/.chef",
       "sudo sed 's/PasswordAuthentication no/PasswordAuthentication yes/g' /etc/ssh/sshd_config > /tmp/sshd_config",
       "sudo cp /tmp/sshd_config /etc/ssh/sshd_config",
@@ -219,7 +219,7 @@ EOL
 
 resource "aws_instance" "workstation-ace" {
   count = "${var.count >= 13 ? "1" : "0"}"
-  ami = "ami-7173fd11"
+  ami = "ami-62b0ad1b"
   key_name = "${var.aws_sshkey}"
   instance_type = "t2.micro"
   vpc_security_group_ids = ["sg-d36252b4"]
@@ -234,7 +234,7 @@ resource "aws_instance" "workstation-ace" {
 
   provisioner "remote-exec" {
     inline = [
-      "sudo usermod --password '$1$odEJTw66$qVh4ZgjC9t2Aq0h3CUxX20' chef",
+      "sudo usermod --password '$1$jms7Ar65$xVMbdLJHd.gvsmLcWxGx9/' chef",
       "sudo mkdir -p /home/chef/.chef",
       "sudo sed 's/PasswordAuthentication no/PasswordAuthentication yes/g' /etc/ssh/sshd_config > /tmp/sshd_config",
       "sudo cp /tmp/sshd_config /etc/ssh/sshd_config",
